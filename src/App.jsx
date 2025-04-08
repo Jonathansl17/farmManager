@@ -24,7 +24,11 @@ const App = () => {
     <div className="flex min-h-screen flex-col">
       <div className="border-b">
         <div className="flex h-16 items-center px-4">
-          <MainNav className="mx-6" />
+          
+        <h1 className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 flex items-center">
+          <Plant className="mr-2 h-6 w-6 text-green-500" />
+          Sistema de Gestión de Cultivos
+        </h1>
           <div className="ml-auto flex items-center space-x-4">
             <SearchComponent />
             <UserNav />
