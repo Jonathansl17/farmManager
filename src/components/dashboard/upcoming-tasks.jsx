@@ -1,5 +1,5 @@
-import { cn } from "../ui/utils"
-import { CheckCircle2, CircleDashed } from "../icons"
+import { cn } from "../ui/utils";
+import { CheckCircle2, CircleDashed, Plus } from "../icons";
 
 export const UpcomingTasks = () => {
   const tasks = [
@@ -38,14 +38,17 @@ export const UpcomingTasks = () => {
       date: "Pasado mañana, 9:00 AM",
       completed: false,
     },
-  ]
+  ];
 
   return (
     <div className="space-y-4">
       {tasks.map((task) => (
         <div
           key={task.id}
-          className={cn("flex items-center justify-between rounded-lg border p-3", task.completed && "bg-muted/50")}
+          className={cn(
+            "flex items-center justify-between rounded-lg border p-3",
+            task.completed && "bg-muted/50"
+          )}
         >
           <div className="flex items-center gap-3">
             {task.completed ? (
@@ -54,13 +57,25 @@ export const UpcomingTasks = () => {
               <CircleDashed className="h-5 w-5 text-muted-foreground" />
             )}
             <div>
-              <p className={cn("font-medium", task.completed && "line-through text-muted-foreground")}>{task.title}</p>
+              <p
+                className={cn(
+                  "font-medium",
+                  task.completed && "line-through text-muted-foreground"
+                )}
+              >
+                {task.title}
+              </p>
               <p className="text-xs text-muted-foreground">{task.field}</p>
             </div>
           </div>
           <div className="text-sm text-muted-foreground">{task.date}</div>
         </div>
       ))}
+
+      <button className="w-full flex items-center justify-center gap-2 p-3 rounded-lg border border-dashed hover:bg-muted/50 transition-colors">
+        <Plus className="h-5 w-5" />
+        <span>Agregar tarea</span>
+      </button>
     </div>
-  )
-}
+  );
+};
