@@ -5,9 +5,7 @@ export const Overview = () => {
     { name: "Feb", Cebollas: 3000, Tomates: 1398, Papas: 2210 },
     { name: "Mar", Cebollas: 2000, Tomates: 9800, Papas: 2290 },
     { name: "Abr", Cebollas: 2780, Tomates: 3908, Papas: 2000 },
-    { name: "May", Cebollas: 1890, Tomates: 4800, Papas: 2181 },
-    { name: "Jun", Cebollas: 2390, Tomates: 3800, Papas: 2500 },
-    { name: "Jul", Cebollas: 3490, Tomates: 4300, Papas: 2100 },
+    { name: "May", Cebollas: 1890, Tomates: 4800, Papas: 2181 }
   ]
 
   return (
